@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orbit Breaker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="game-shell" aria-label="Orbit Breaker game">
+      <header class="hud">
+        <div>
+          <p class="kicker">Orbit Breaker</p>
+          <div class="timer-row">
+            <span>Time</span>
+            <strong id="timer">0:00</strong>
+          </div>
+          <h1>Tap the perfect slingshot.</h1>
+        </div>
+        <div class="score-card" aria-live="polite">
+          <span>Score</span>
+          <strong id="score">0</strong>
+        </div>
+      </header>
+
+      <section class="stage-wrap">
+        <canvas id="game" width="960" height="960" aria-label="Orbit Breaker play field"></canvas>
+        <div id="overlay" class="overlay">
+          <div class="panel">
+            <p id="panelMode" class="kicker">Ready</p>
+            <h2 id="panelTitle">Break orbit</h2>
+            <p id="panelText">
+              Tap, click, or press Space when the violet launch line points through another planet's gravity field.
+              Get captured to keep the chain alive.
+            </p>
+            <button id="startBtn" type="button">Start run</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="controls">
+        <button id="launchBtn" class="launch-btn" type="button" aria-label="Launch satellite">
+          Launch
+        </button>
+        <div class="mini-stats">
+          <div><span>Best</span><strong id="best">0</strong></div>
+          <div id="homingCard" class="homing-card"><span>Homing</span><strong id="homing">Empty</strong></div>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
